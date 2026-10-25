@@ -24,11 +24,21 @@ Comando 5. Volver a consultar el contenido del directorio raíz: hdfs dfs -ls /
 Comando 6. Comprobar el contenido del directorio personal: hdfs dfs -ls /user/Pablo
 
 
-Carga de datasets
+2. Carga de datasets
 
 Descarga el dataset Automotive Price Prediction Dataset que puedes obtener desde Kaggle y que contiene un dataset sintético con información y precio de 1000000 de vehículos de segunda mano
 Desde tu sistema local, sube al directorio proyecto_datos el dataset que has descargado.
-Exploración de datos
+
+![alt text](image-3.png)
+
+los comandos mas destacados de este paso son:
+Comando 1:  docker cp "C:\Users\Usuario\Downloads\vehicle_price_prediction.csv" namenode:/tmp/
+Comando 2: hdfs dfs -put /tmp/vehicle_price_prediction.csv /user/Pablo/proyecto_datos/
+Comando 3: hdfs dfs -ls /user/Pablo/proyecto_datos/
+
+3. Exploración de datos
+
+    
 
 Visualiza el contenido del archivo directamente en HDFS.
 Obtén el número de líneas del dataset.
