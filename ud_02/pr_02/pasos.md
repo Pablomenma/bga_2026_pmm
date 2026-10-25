@@ -38,16 +38,32 @@ Comando 3: hdfs dfs -ls /user/Pablo/proyecto_datos/
 
 3. Exploración de datos
 
-    
-
 Visualiza el contenido del archivo directamente en HDFS.
 Obtén el número de líneas del dataset.
-Organización del proyecto
+
+
+![alt text](image-4.png)
+
+comandos utilizados en el paso 3: 
+comando 1: hdfs dfs -cat /user/Pablo/proyecto_datos/vehicle_price_prediction.csv 
+comando 2:  hdfs dfs -cat /user/Pablo/proyecto_datos/vehicle_price_prediction.csv | wc -l
+
+4. Organización del proyecto
 
 Crea un subdirectorio procesados y otro backup dentro de tu carpeta de proyecto.
 Copia el archivo original a backup.
 Mueve el archivo original de proyecto_datos a procesados.
-Colaboración en el equipo
+
+![alt text](image-5.png)
+
+los comandos utilizados en el paso 4 son:
+Comando 1: hdfs dfs -mkdir /user/Pablo/proyecto_datos/procesados
+comando 2: hdfs dfs -mkdir /user/Pablo/proyecto_datos/backup
+comando 3:  hdfs dfs -cp /user/Pablo/proyecto_datos/vehicle_price_prediction.csv /user/Pablo/proyecto_datos/backup/
+comando 4: hdfs dfs -mv /user/Pablo/proyecto_datos/vehicle_price_prediction.csv /user/Pablo/proyecto_datos/procesados/
+comando 5: hdfs dfs -mv /user/Pablo/proyecto_datos/vehicle_price_prediction.csv /user/Pablo/proyecto_datos/procesados/
+
+5.Colaboración en el equipo
 
 Crea un directorio compartido bajo /compartido (si no existe) y copia allí tu dataset para que otros puedan acceder.
 Recuperación de datos
