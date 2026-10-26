@@ -64,10 +64,16 @@ comando 4: hdfs dfs -mv /user/Pablo/proyecto_datos/vehicle_price_prediction.csv 
 comando 5: hdfs dfs -mv /user/Pablo/proyecto_datos/vehicle_price_prediction.csv /user/Pablo/proyecto_datos/procesados/
 
 5.Colaboración en el equipo
-
 Crea un directorio compartido bajo /compartido (si no existe) y copia allí tu dataset para que otros puedan acceder.
-Recuperación de datos
+![alt text](image-6.png)
 
+
+Los comandos utilizados en el paso 5 son:
+comando 1:  hdfs dfs -mkdir /compartido
+comando 2 :  hdfs dfs -cp /user/Pablo/proyecto_datos/procesados/vehicle_price_prediction.csv /compartido/
+
+
+6.Recuperación de datos
 Descarga a tu sistema local el archivo que está en el directorio procesados.
 Control de accesos
 
