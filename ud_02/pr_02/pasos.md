@@ -97,9 +97,14 @@ comando 2: hdfs dfs -ls /user/Pablo/proyecto_datos/backup/
 8.Mantenimiento
 Elimina un archivo temporal que hayas subido por error a tu espacio en HDFS.
 
-(Opcional, avanzado)
+![alt text](image-9.png)
 
-Configura una cuota de número de archivos en tu directorio de proyecto y prueba a superar el límite para observar el comportamiento de HDFS.
+los comandos del punto 8 utilizados son:
+comando 1: echo "Archivo temporal de prueba" > /tmp/temporal.txt
+comando 2: hdfs dfs -put /tmp/temporal.txt /user/Pablo/
+comando 3 hdfs dfs -ls /user/Pablo/
+comando 4: hdfs dfs -rm /user/Pablo/temporal.txt
+
 Entrega
 Sube a tu repositorio un documento que incluya:
 
