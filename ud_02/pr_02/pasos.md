@@ -83,12 +83,16 @@ comando 1: hdfs dfs -get /user/Pablo/proyecto_datos/procesados/vehicle_price_pre
 comando 2:ls -lh /tmp/vehicle_recuperado.csv
 comando 3 (fuera del contenedor): docker cp namenode:/tmp/vehicle_recuperado.csv "C:\Users\Usuario\Downloads\vehicle_recuperado.csv"
 
-
-
 7.Control de accesos
 Verifica los permisos de tus archivos.
 Cambia los permisos de un archivo de backup para que solo tú tengas acceso de lectura y escritura.
 
+
+![alt text](image-8.png)
+
+los comandos utilizados en el paso 7 son: 
+comando 1: hdfs dfs -c  -chmod 600 /user/Pablo/proyecto_datos/backup/vehicle_price_prediction.csv
+comando 2: hdfs dfs -ls /user/Pablo/proyecto_datos/backup/
 
 8.Mantenimiento
 Elimina un archivo temporal que hayas subido por error a tu espacio en HDFS.
