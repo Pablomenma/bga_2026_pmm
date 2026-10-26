@@ -75,13 +75,24 @@ comando 2 :  hdfs dfs -cp /user/Pablo/proyecto_datos/procesados/vehicle_price_pr
 
 6.Recuperación de datos
 Descarga a tu sistema local el archivo que está en el directorio procesados.
-Control de accesos
 
+![alt text](image-7.png)
+
+los comandos utilizados para el paso 6 son:
+comando 1: hdfs dfs -get /user/Pablo/proyecto_datos/procesados/vehicle_price_prediction.csv /tmp/vehicle_recuperado.csv
+comando 2:ls -lh /tmp/vehicle_recuperado.csv
+comando 3 (fuera del contenedor): docker cp namenode:/tmp/vehicle_recuperado.csv "C:\Users\Usuario\Downloads\vehicle_recuperado.csv"
+
+
+
+7.Control de accesos
 Verifica los permisos de tus archivos.
 Cambia los permisos de un archivo de backup para que solo tú tengas acceso de lectura y escritura.
-Mantenimiento
 
+
+8.Mantenimiento
 Elimina un archivo temporal que hayas subido por error a tu espacio en HDFS.
+
 (Opcional, avanzado)
 
 Configura una cuota de número de archivos en tu directorio de proyecto y prueba a superar el límite para observar el comportamiento de HDFS.
